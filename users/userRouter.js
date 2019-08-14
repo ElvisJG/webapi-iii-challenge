@@ -43,18 +43,6 @@ function validateUserId(req, res, next) {}
 
 function validateUser(req, res, next) {}
 
-function validatePost(req, res, next) {
-  if (!req.body) {
-    res.status(400).json({ message: 'missing post data' });
-  } else if (!req.body.text) {
-    res.status(400).json({ message: 'missing required text field' });
-  }
-  next();
-  //  ⬇️ This won't work RIP ⬇️
-  //   req.body ? next() : res.status(400).json({ message: 'missing post data' });
-  //   !req.body.name
-  //     ? res.status(400).json({ message: ' missing required text field' })
-  //     : next();
-}
+function validatePost(req, res, next) {}
 
 module.exports = router;
