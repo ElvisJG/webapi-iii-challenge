@@ -6,8 +6,8 @@ const router = express.Router();
 // GET /api/posts
 router.get('/', async (req, res) => {
   try {
-    const posts = await Posts.get();
-    res.status(200).json(posts);
+    const allPosts = await Posts.get();
+    res.status(200).json(allPosts);
   } catch (error) {
     // log error
     console.log(error);
