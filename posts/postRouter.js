@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// PUT /api/posts/{id}
+// GET /api/posts/{id}
 router.get('/:id', async (req, res) => {
   try {
     const post = await Posts.getById(req.params.id);
@@ -30,14 +30,14 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// PUT /api/posts/{id}
+// DELETE /api/posts/{id}
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const destroy = await Posts.remove(id);
 
     if (id) {
-      res.status.json({
+      res.status(200).json({
         destroy,
         message: `Destroyed the post with an ID of ${id}`
       });
