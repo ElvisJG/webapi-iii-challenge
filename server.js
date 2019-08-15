@@ -3,6 +3,7 @@ const postRouter = require('./posts/postRouter');
 const usersRouter = require('./users/userRouter');
 
 const server = express();
+const path = require('path');
 
 // Express.json is a method that returns a piece of middleware
 const bodyParser = express.json();
