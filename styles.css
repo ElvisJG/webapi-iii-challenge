@@ -1,0 +1,46 @@
+body {
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  background: -webkit-linear-gradient(#00a2ff, #333 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #eee;
+}
+
+table {
+  width: 100%;
+  max-width: 1080px;
+  font-size: 2rem;
+  margin: 2rem;
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 2.5rem;
+  color: #eee;
+}
+
+tr {
+}
+
+th {
+  color: #00a2ff;
+}
+
+td {
+  color: #eee;
+  border: 5px solid deeppink;
+}
