@@ -6,8 +6,11 @@ const router = express.Router();
 // GET /api/posts
 router.get('/', async (req, res) => {
   try {
+    const posts =
+      process.env.POSTS ||
+      'This is an environmnent variable inside of the postsRouter';
     const allPosts = await Posts.get();
-    res.status(200).json(allPosts);
+    res.status(200).json({ posts: posts, allPosts });
   } catch (error) {
     // log error
     console.log(error);

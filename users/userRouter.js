@@ -32,8 +32,11 @@ router.post('/:id/posts', [validateUserId, validatePost], async (req, res) => {
 // GET /api/users
 router.get('/', async (req, res) => {
   try {
+    const users =
+      process.env.USERS ||
+      'This is an environment variable inside of the userRouter';
     const allUsers = await Users.get();
-    res.status(200).json(allUsers);
+    res.status(200).json({ users: users, allUsers });
   } catch (error) {
     // log error
     console.log(error);
