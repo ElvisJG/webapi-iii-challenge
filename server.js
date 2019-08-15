@@ -15,7 +15,7 @@ server.use('/api/posts', postRouter);
 server.use('/api/users', usersRouter);
 
 server.get('/', (req, res) => {
-  res.send(`<h2>WEB API IV Challenge</h2>`);
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 //custom middleware
